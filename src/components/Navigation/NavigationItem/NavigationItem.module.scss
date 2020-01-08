@@ -1,0 +1,13 @@
+.NavigationItem {
+    display: inline-block;
+    padding: 10px 0 5px 30px;
+    a {
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        transition: 0.3s;
+        &:hover {
+            color: #5BC8AC;
+        }
+    }
+}

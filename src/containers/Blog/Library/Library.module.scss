@@ -1,0 +1,19 @@
+.Library {
+    display: block;
+    position: relative;
+    padding: 40px;
+    background: rgba(232, 255, 234, 1) ;
+    h1 {
+        display: block;
+        text-align: center;
+        font-weight: 300;
+        color:  rgb(7, 170, 132);
+        margin-bottom: 30px;
+    }
+    .ArticleWrapper {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,9 @@
+Install dependencies
+Title: Total Recall 
+
+Navigation
+   Metaheader: Login/logout/ New Post +
+    Home
+    Opinion
+    Science
+    Travel

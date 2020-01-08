@@ -1,0 +1,10 @@
+.Backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+    z-index: 999;
+    img {
+        width: 70%;
+    }
+}

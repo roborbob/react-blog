@@ -1,0 +1,41 @@
+.navigation {
+    position: fixed;
+    width: 100%;
+    background: white;
+    height: 150px;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid black;
+    .titleContainer {
+        position: absolute;
+        display: inline-block;
+        width: auto;
+        left: 10%;
+        right: 10%;
+        bottom: 0;
+        @media (min-width: 800px) {
+            position: relative;
+            display: block;
+            width: 800px;
+            height: 100%;
+            margin: auto;
+            left: 0;
+        }
+        a {
+            text-decoration: none;
+            h1 {
+                position: absolute;
+                color: black;
+                font-weight: 500;
+                margin: 0;
+                font-size: 50px;
+                bottom: 0;
+            }
+        }
+    }
+    .navContainer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
