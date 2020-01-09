@@ -6,6 +6,7 @@ import axios from '../../axios';
 class FullArticle extends Component {
     state = {
         loadedArticle: null,
+        deleted: false
     }
 
     componentDidMount () {
@@ -13,12 +14,12 @@ class FullArticle extends Component {
     }
 
     deleteArticleHandler= () => {
-        return <PopUp/>
-        // axios.delete('/library/' + this.props.match.params.id + ".json")
-        //     .then(response => {
-        //         console.log(response);
+        axios.delete('/library/' + this.props.match.params.id + ".json")
+            .then(response => {
+                this.setState({ deleted: true})
+                console.log(response);
 
-        //     });
+            });
     }
 
 
@@ -37,10 +38,10 @@ class FullArticle extends Component {
 
         let article = <p>Something better be happening!</p>;
 
-        if ( this.props.match.params.id ) {
+        if (this.props.match.params.id ) {
             article = <p style={{ textAlign: 'center' }}>Loading...!</p>;
-        }
-        if (this.state.loadedArticle) {
+        }   
+        if (this.state.loadedArticle && !this.state.deleted) {
             article = (
 
                 <div className={styles.loadedArticle}>
@@ -49,6 +50,13 @@ class FullArticle extends Component {
                     <h3>{this.state.loadedArticle.author}</h3>
                     <button onClick={this.deleteArticleHandler}>Delete</button>
                 </div>
+            )
+        }
+        if (this.state.deleted) {
+            article = (
+                <PopUp
+                    title={this.state.loadedArticle.title}
+                />
             )
         }
         return article

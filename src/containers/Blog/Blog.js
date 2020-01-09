@@ -42,8 +42,8 @@ class Blog extends Component {
 
         return (
             <div className={styles.Blog}>
-                <h2>BLOODY FUCKING HELL GET THIS APP DONE!</h2>
-                <p>Some other stuff</p>
+                <h2>Home Page</h2>
+             
             </div>
         );
     }
